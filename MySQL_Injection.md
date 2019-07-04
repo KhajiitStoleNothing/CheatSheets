@@ -1,5 +1,7 @@
-All credits go to pentestmonkey:
+# All credits go to pentestmonkey:
 
+| Description | Commands |
+| --- | --- |
 |Version|SELECT @@version|
 |Comments|SELECT 1; #comment|
 |SELECT /*comment*/1;|
