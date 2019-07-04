@@ -10,8 +10,7 @@
 |List Privileges|SELECT * FROM session_privs; — current priv; SELECT * FROM dba_sys_privs WHERE grantee = ‘DBSNMP’; — priv, list a user’s priv; SELECT grantee FROM dba_sys_privs WHERE privilege = ‘SELECT ANY DICTIONARY’; — priv, find users with a particular pri; SELECT GRANTEE, GRANTED_ROLE FROM DBA_ROLE_PRIVS;|
 |List DBA Accounts|SELECT DISTINCT grantee FROM dba_sys_privs WHERE ADMIN_OPTION = ‘YES’; — priv, list DBAs, DBA roles|
 |Current Database|SELECT global_name FROM global_name; SELECT name FROM v$database; SELECT instance_name FROM v$instance; SELECT SYS.DATABASE_NAME FROM DUAL;|
-|List Databases|SELECT DISTINCT owner FROM all_tables; — list schemas (one per user)
-– Also query TNS listener for other databases.  See tnscmd (services | status).|
+|List Databases|SELECT DISTINCT owner FROM all_tables; — list schemas (one per user)– Also query TNS listener for other databases.  See tnscmd (services | status).|
 |List Columns|SELECT column_name FROM all_tab_columns WHERE table_name = ‘blah’; SELECT column_name FROM all_tab_columns WHERE table_name = ‘blah’ and owner = ‘foo’;|
 |List Tables|SELECT table_name FROM all_tables; SELECT owner, table_name FROM all_tables;|
 |Find Tables From Column Name|SELECT owner, table_name FROM all_tab_columns WHERE column_name LIKE ‘%PASS%’; — NB: table names are upper case|
