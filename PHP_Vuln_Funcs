@@ -1,0 +1,17 @@
+exec
+shell_exec
+system
+passthru
+pcntl_exec
+popen
+proc_open
+eval
+preg_replace (with /e modifier)
+create_function
+file_get_contents
+file_put_contents
+readfile
+include
+require
+require_once
+include_once
