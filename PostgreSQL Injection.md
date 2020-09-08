@@ -33,3 +33,4 @@
 |Make User DBA|ALTER USER test1 CREATEUSER CREATEDB; — priv; Location of DB files|SELECT current_setting(‘data_directory’); — priv; SELECT current_setting(‘hba_file’); — priv|
 |Default/System Databases|template0; template1
 |Dollar Strings| Instead of quotes you can alternatively use $$ (duoble-dollar) for quoting stings, of $ (single-dollar) with tag: SELECT $$TEST$$; SELECT $TAG$TEST$TAG$; |
+|Write arbitary data to disc | CREATE TEMP TABLE TEST(data text);INSERT INTO TEST(data) VALUES ($$test$$);COPY TEST(data) TO $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$ | 
