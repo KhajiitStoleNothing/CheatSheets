@@ -8,6 +8,7 @@
 |List Password Hashes|SELECT usename, passwd FROM pg_shadow — priv|
 |Password Cracker|MDCrack can crack PostgreSQL’s MD5-based passwords.|
 |List Privileges|SELECT usename, usecreatedb, usesuper, usecatupd FROM pg_user|
+|Check if you are superuser| SELECT current_setting('is_superuser'); |
 |List DBA Accounts|SELECT usename FROM pg_user WHERE usesuper IS TRUE|
 |Current Database|SELECT current_database()|
 |List Databases|SELECT datname FROM pg_database|
