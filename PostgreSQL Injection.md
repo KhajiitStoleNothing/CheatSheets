@@ -35,5 +35,5 @@
 |Default/System Databases|template0; template1
 |Dollar Strings| Instead of quotes you can alternatively use $$ (duoble-dollar) for quoting stings, of $ (single-dollar) with tag: SELECT $$TEST$$; SELECT $TAG$TEST$TAG$; |
 |Write arbitary data to disc | CREATE TEMP TABLE TEST(data text);INSERT INTO TEST(data) VALUES ($$test$$);COPY TEST(data) TO $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$ | 
-|Read data from file| CREATE TEMP TABLE TEST(data text); COPY TEST(data) from $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$; |
+|Read data from file| CREATE TEMP TABLE TEST(data text); COPY TEST from $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$; |
 |Blind CASE query example| SELECT case when (SELECT current_setting($$is_superuser$$))=$$on$$ then pg_sleep(5) end; |
