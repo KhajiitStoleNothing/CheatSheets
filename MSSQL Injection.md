@@ -19,6 +19,7 @@
 |Bitwise AND|SELECT 6 & 2 — returns ; SELECT 6 & 1 — returns 0|
 |ASCII Value -> Char|SELECT char(0×41) — returns A|
 |Char -> ASCII Value|SELECT ascii(‘A’) – returns 65|
+|Local File Read|SELECT * FROM OPENROWSET(BULK N'C:\\Windows\\win.ini', SINGLE_CLOB) AS Contents|
 |Casting|SELECT CAST(’1′ as int); SELECT CAST(1 as char)|
 |String Concatenation|SELECT ‘A’ + ‘B’ – returns AB|
 |If Statement|IF (1=1) SELECT 1 ELSE SELECT 2 — returns 1|
